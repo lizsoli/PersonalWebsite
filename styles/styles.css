@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    margin-right: 20%;
+    padding: 0;
+    background-color: #B3CEE5;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+h2 {
+    color:red;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.videoplacement {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 1px;
+  }
+  
+  /* Clear floats after image containers
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding-right: 7px;
+    text-align: center;
+}
+
+/* .cursor {
+    cursor: url("/images/favicon.jpg");
+} */
+  

@@ -1,0 +1,112 @@
+.sidebar {
+    /* position: sticky;  */
+    top: 0;
+    left: 0;
+    width: 300px;
+    min-width: 300px;
+    /* display: flex; */
+    height: 100%;
+    background-color: transparent;
+    color: black;
+    padding-left: 45px;
+    padding-top: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Style for links on hover */
+/* .sidebar ul li a:hover {
+    font-weight: bold;
+} */
+
+.sidebar ul li a p {
+    color: #000000;
+    /* color: red; */
+    font-size: 18px;
+}
+
+/* LINK HOVERS */
+.special-link1:hover span {
+        color: #f76407; /* Change to desired hover color */
+    }
+
+.special-link2:hover span {
+        color: #de6c00; /* Change to desired hover color */
+    }
+    
+.special-link3:hover span {
+        color: #c57100; /* Change to desired hover color */
+    }
+
+.special-link4:hover span {
+        color: #ad7400; /* Change to desired hover color */
+    }
+
+.special-link5:hover span {
+        color: #957500; /* Change to desired hover color */
+    }
+
+.special-link6:hover span {
+        color: #7e7400; /* Change to desired hover color */
+    }
+
+.special-link7:hover span {
+        color: #687200; /* Change to desired hover color */
+    }
+
+.special-link8:hover span {
+        color: #526f00; /* Change to desired hover color */
+    }
+
+.special-link9:hover span {
+        color: #3e6b00; /* Change to desired hover color */
+    }
+
+.special-link10:hover span {
+        color: #286612; /* Change to desired hover color */
+    }
+
+.special-link11:hover span {
+        color: #286612; /* Change to desired hover color */
+    }
+
+.special-link12:hover span {
+        color: #286612; /* Change to desired hover color */
+    }
+  
+    /* BLACK BOX STUFF GOES HERE!!!!!!!!!! */
+    /* .sidebar .blackbox {
+        background-color: black;
+        padding: 20px;
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        bottom: 30px;
+        border-radius: 20px;
+    }
+    .sidebar .blackbox h2 {
+    color: #B3CEE5;
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: left;
+    } */
+    
+
+
+    /* selected link */
+/* .sidebar ul li a p:active {
+    color: yellow;
+} */
+
