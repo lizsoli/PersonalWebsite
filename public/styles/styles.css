@@ -1,6 +1,7 @@
 body {
     margin: 0;
     margin-right: 20%;
+    margin-top: 10px;
     padding: 0;
     background-color: #B3CEE5;
     display: flex;
@@ -9,12 +10,13 @@ body {
 }
 
 h2 {
-    color:red;
+    color: red;
 }
 
 .main-content {
     flex-grow: 1;
-    padding: 30px;
+    padding-right: 30px;
+    margin-top: 30px;
 }
 
 .videoplacement {
@@ -30,26 +32,56 @@ h2 {
     float: left;
     width: 33.33%;
     padding: 1px;
-  }
-  
-  /* Clear floats after image containers
-  .row::after {
+}
+
+/* Clear floats after image containers */
+.row::after {
     content: "";
     clear: both;
     display: table;
-  } */
+}
 
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding-right: 7px;
     text-align: center;
 }
 
-/* .cursor {
-    cursor: url("/images/favicon.jpg");
-} */
-  
+/* Add this style for the enlarged table */
+table.enlarged {
+    table-layout: fixed;
+}
+
+/* Add this style for the image container */
+.thumbnailContainer {
+    position: relative;
+    overflow: hidden;
+    width: 333px;
+    height: 200px;
+    float: left;
+}
+
+/* Add this style for the thumbnail image */
+.thumbnailImage {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add this style for the enlarged image */
+.thumbnailImage.enlarged {
+    /* position: absolute; */
+    z-index: 1;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) scale(2); /* Center and scale */
+    transform-origin:initial;
+     /* Set the transform origin to the top-left corner */
+    width: 666px;
+    height: 400px;
+    margin: 0;
+}
