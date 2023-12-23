@@ -52,36 +52,29 @@ td {
     text-align: center;
 }
 
-/* Add this style for the enlarged table */
-table.enlarged {
-    table-layout: fixed;
+/* Removed this garbage animation */
+/* .thumbnailImage {
+    transition: all 0.5s ease;
+} */
+
+.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.5);
+    z-index: 1000;
+    max-width: 90%;
+    max-height: 90%;
 }
 
-/* Add this style for the image container */
-.thumbnailContainer {
-    position: relative;
-    overflow: hidden;
-    width: 333px;
-    height: 200px;
-    float: left;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
-/* Add this style for the thumbnail image */
-.thumbnailImage {
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Add this style for the enlarged image */
-.thumbnailImage.enlarged {
-    /* position: absolute; */
-    z-index: 1;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%) scale(2); /* Center and scale */
-    transform-origin:initial;
-     /* Set the transform origin to the top-left corner */
-    width: 666px;
-    height: 400px;
-    margin: 0;
-}
+  

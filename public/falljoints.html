@@ -81,55 +81,27 @@
             </tr>
         </table>
         <script>
-            $(document).ready(function () {
-                $(".thumbnailImage").click(function () {
-                    // Toggle the 'enlarged' class on the clicked image
-                    $(this).toggleClass('enlarged');
+document.querySelectorAll('.thumbnailImage').forEach(image => {
+    image.addEventListener('click', () => {
+        // Add the enlarged class to start the animation
+        image.classList.add('enlarged');
 
-                    // Check if the image has the 'enlarged' class
-                    var isEnlarged = $(this).hasClass('enlarged');
+        // Create or find the overlay
+        let overlay = document.querySelector('.overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            document.body.appendChild(overlay);
 
-                    // Set the transform scale based on whether it's enlarged or not
-                    var scale = isEnlarged ? calculateScale() : 1;
-
-                    // Update the image size and position using CSS
-                    $(this).css({
-                        'transform': 'scale(' + scale + ')',
-                        'z-index': isEnlarged ? 1 : 'auto', // Ensure proper layering
-                        'position': isEnlarged ? 'fixed' : 'static', // Fix position when enlarged
-                        'max-width': isEnlarged ? '100%' : 'none', // Limit width when enlarged
-                        'max-height': isEnlarged ? '100%' : 'none', // Limit height when enlarged
-                        'top': isEnlarged ? '50%' : 'auto',
-                        'left': isEnlarged ? '50%' : 'auto',
-                        'transform': isEnlarged ? 'translate(-50%, -50%) scale(' + scale + ')' : 'none' // Center the image
-                    });
-                });
-
-                // Function to calculate the scale based on the window size
-                function calculateScale() {
-                    var windowWidth = $(window).width();
-                    var windowHeight = $(window).height();
-                    var maxWidth = 0.9 * windowWidth; // Set maximum width to 90% of window width
-                    var maxHeight = 0.9 * windowHeight; // Set maximum height to 90% of window height
-
-                    // Calculate scale to fit within the window
-                    var scaleX = maxWidth / $(this).width();
-                    var scaleY = maxHeight / $(this).height();
-                    return Math.min(scaleX, scaleY);
-                }
-
-                // Recalculate scale and position on window resize
-                $(window).resize(function () {
-                    if ($(".thumbnailImage.enlarged").length > 0) {
-                        $(".thumbnailImage.enlarged").each(function () {
-                            var scale = calculateScale();
-                            $(this).css({
-                                'transform': 'translate(-50%, -50%) scale(' + scale + ')'
-                            });
-                        });
-                    }
-                });
+            // Clicking on the overlay reverts the image back to normal
+            overlay.addEventListener('click', () => {
+                image.classList.remove('enlarged');
+                overlay.remove();
             });
+        }
+    });
+});
+
         </script>
     </div>
 
