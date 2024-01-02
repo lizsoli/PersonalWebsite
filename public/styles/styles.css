@@ -77,4 +77,22 @@ td {
     z-index: 999;
 }
 
-  
+  /* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .sidebar ul {
+        display: none; /* Hide the navigation menu by default on mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Display the hamburger menu button on mobile */
+    }
+
+    .main-content {
+        max-width: 100%; /* Adjust the width of the main content for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .thumbnailImage {
+        width: 100%; /* Make images take 100% width of their container on mobile */
+    }
+}
