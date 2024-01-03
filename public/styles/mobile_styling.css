@@ -1,0 +1,27 @@
+@media only screen and (max-width: 480px) {
+    .desktop-table{
+        display: none;
+    }
+    .sidebar ul {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-styles{
+        display: block;
+    }
+
+    .mobile-styles .thumbnailImage {
+        width: 100%;
+    }
+
+    body {
+        margin: 15%;
+        margin-top: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}

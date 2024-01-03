@@ -6,6 +6,8 @@
     <title>Heaven is a Cistern</title>
     <link rel="stylesheet" type="text/css" href="styles/sidebar_styling.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile_styling.css">
+
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 </head>
 <body>
@@ -32,7 +34,7 @@
         <p>An accordion-esque book inspired by <a href="https://www.tumblr.com/baylen/734384349947002880/never-not-thinking-about-giant-cisterns-thats?source=share" target="_blank">this Tumblr post</a>.
         </p>
 
-          <table>
+        <table class="desktop-table">
             <tr> <!--row 1-->
                 <td><img src="images/heaven is a cistern uploads/imveryexcited.gif" alt="pic" width="333px" height="200px"></td> <!--col 1-->
                 <td><img src="images/heaven is a cistern uploads/Artboard 1.png" alt="pic" width="333px" height="200px"></td>
@@ -43,9 +45,53 @@
                 <td><img src="images/heaven is a cistern uploads/Artboard 4.png" alt="pic" width="333px" height="200px"></td>
             </tr>
         </table>
+
+        <div class="mobile-styles">
+            <table class="mobile-table">
+                <tr>
+                    <td><img img src="images/heaven is a cistern uploads/imveryexcited.gif" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/heaven is a cistern uploads//Artboard 1.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/heaven is a cistern uploads//Artboard 2.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/heaven is a cistern uploads//Artboard 3.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/heaven is a cistern uploads//Artboard 4.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+            </table>   
+         </div>
+
     </div>
 
     <!-- DO NOT PUT ANYTHING HERE BOZO -->
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+        
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+        
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+        
+                </script>
 
 </body>
 </html>

@@ -6,6 +6,8 @@
     <title>Digital collages</title>
     <link rel="stylesheet" type="text/css" href="styles/sidebar_styling.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile_styling.css">
+
     <link rel="icon" href="images/pic.jpg">
 </head>
 <body>
@@ -29,12 +31,12 @@
     <!-- start coding here (inside the div) -->
     <div class="main-content">
         <p style="font-weight: bold">Digital collages</p>
-        <table>
-            <tr> <!--row 1-->
+        <table class="desktop-table">
+            <tr> 
                 <td>
                     <img src="images/digital collages/space.jpeg" alt="pic" width="201px" height="269px">
                     <p style="font-size: 11px;">On a plate of space</p>
-                </td> <!--col 1-->
+                </td>
                 
                 <td>
                     <img src="images/digital collages/texperience.jpeg" alt="pic" width="252px" height="303px">
@@ -47,11 +49,11 @@
                 </td>
             </tr>
         
-            <tr> <!--row 2-->
+            <tr> 
                 <td>
                     <img src="images/digital collages/cheers.jpeg" alt="pic" width="180px" height="215px">
                     <p style="font-size: 11px">I used to be a people person</p> 
-                </td> <!--col 1-->
+                </td>
         
                 <td>
                     <img src="images/digital collages/currency.jpeg" alt="pic" width="247px" height="110px">
@@ -59,9 +61,69 @@
                 </td>
             </tr>
         </table>
+
+        <div class="mobile-styles">
+            <table class="mobile-table">
+                <tr>
+                    <td>
+                        <img src="images/digital collages/space.jpeg" alt="pic" width="201px" height="269px">
+                        <p style="font-size: 11px;">On a plate of space</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/digital collages/texperience.jpeg" alt="pic" width="252px" height="303px">
+                        <p style="font-size: 11px">Texperience</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/digital collages/bathroomsea.jpeg" alt="pic" width="224px" height="243px">
+                        <p style="font-size: 11px">Bathroom Sea</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/digital collages/cheers.jpeg" alt="pic" width="180px" height="215px">
+                        <p style="font-size: 11px">I used to be a people person</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/digital collages/currency.jpeg" alt="pic" width="247px" height="110px">
+                        <p style="font-size: 11px">Currency</p>
+                    </td>
+                </tr>
+                    
+            </table>   
+         </div>
+
     </div>
 
     <!-- DO NOT PUT ANYTHING HERE BOZO -->
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+        
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+        
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+        
+                </script>
 
 </body>
 </html>

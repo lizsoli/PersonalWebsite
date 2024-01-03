@@ -6,7 +6,9 @@
     <title>Fall Joints</title>
     <link rel="stylesheet" type="text/css" href="styles/sidebar_styling.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile_styling.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 
 </head>
@@ -28,6 +30,35 @@
             <li><a href="contact.html" class="special-link12"><span>Contact</span></a></li>
         </ul>
     </div>
+
+       <!-- Hamburger menu icon for mobile -->
+       <div class="hamburger-menu">
+        <img src="images/favicon.jpg" alt="Hamburger Menu">
+    </div>
+
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+    </script>
+
     <!-- start coding here -->
     <div class="main-content">
         <p style="font-weight: bold">Fall Joints</p>
@@ -35,7 +66,7 @@
             to make something without caring if the end result was "good," which meant it ended up being more vulnerable than I intended. 
             At the time, it was the most liberating thing I could've done for myself. I LOVE fall! </p>
 
-          <table>
+          <table class="desktop-table">
             <tr> <!--row 1-->
                 <td><img class="thumbnailImage" img src="images/ fall joints uploads/Artboard 1.png" alt="pic" width="333px" height="200px"></td> <!--col 1-->
                 <td><img class="thumbnailImage" img src="images/ fall joints uploads/Artboard 2.png" alt="pic" width="333px" height="200px"></td>
@@ -80,32 +111,129 @@
                 <td><img class="thumbnailImage" img src="images/ fall joints uploads/Artboard 25.png" alt="pic" width="333px" height="200px"></td>
             </tr>
         </table>
-        <script>
-document.querySelectorAll('.thumbnailImage').forEach(image => {
-    image.addEventListener('click', () => {
-        // Add the enlarged class to start the animation
-        image.classList.add('enlarged');
 
-        // Create or find the overlay
-        let overlay = document.querySelector('.overlay');
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.classList.add('overlay');
-            document.body.appendChild(overlay);
+        <div class="mobile-styles">
+            <table class="mobile-table">
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 1.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 2.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 3.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 4.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 5.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 6.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 7.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 8.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 9.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 10.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 11.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 12.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 13.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 14.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 15.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 16.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 17.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 18.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 19.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 20.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 21.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 22.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 23.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 24.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/ fall joints uploads/Artboard 25.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+            </table>   
+         </div>
 
-            // Clicking on the overlay reverts the image back to normal
-            overlay.addEventListener('click', () => {
-                image.classList.remove('enlarged');
-                overlay.remove();
-            });
-        }
-    });
-});
+        <!-- Mobile navigation menu -->
+            <div class="mobile-menu">
+                <ul>
+                    <!-- Mobile menu items go here -->
+                </ul>
+            </div>
 
-        </script>
+         <!-- Add your script to handle mobile menu toggle -->
+            <script>
+             // Add your script to toggle the mobile menu visibility
+                $(document).ready(function () {
+                    $('.hamburger-menu').click(function () {
+                        $('.mobile-menu').slideToggle();
+                    });
+                });
+            </script>
+
     </div>
 
     <!-- DO NOT PUT ANYTHING HERE BOZO -->
-
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+        
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+        
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+        
+                </script>
 </body>
 </html>

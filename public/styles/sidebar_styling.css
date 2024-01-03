@@ -86,6 +86,11 @@
         color: #286612; /* Change to desired hover color */
     }
   
+@media only screen and (max-width: 400px) {
+    .sidebar {
+        display: none;
+    }
+}
     /* BLACK BOX STUFF GOES HERE!!!!!!!!!! */
     /* .sidebar .blackbox {
         background-color: black;

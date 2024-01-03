@@ -6,6 +6,7 @@
     <title>Postcards from Rogart</title>
     <link rel="stylesheet" type="text/css" href="styles/sidebar_styling.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile_styling.css">
     <link rel="icon" href="images/pic.jpg">
 </head>
 <body>
@@ -31,7 +32,7 @@
         <p style="font-weight: bold">Postcards from Rogart</p>
         <p>A project about shepherds and crofters on Twitter, and how I interact with them. In it, I interview Mairi,
             an English crofter in Scotland. </p>
-            <table>
+            <table class="desktop-table">
                 <tr> <!--row 1-->
                     <td><img src="images/postcards/A.png" alt="pic" width="500px" height="375px"></td> <!--col 1-->
                     <td><img src="images/postcards/B.png" alt="pic" width="500px" height="375px"></td>
@@ -52,9 +53,41 @@
                     <td><img src="images/postcards/K.png" alt="pic" width="500px" height="375px"></td>
                 </tr>
                 </table>
+
+                <div class="mobile-styles">
+                    <table class="mobile-table">
+                        <tr>
+                            <td><img img src="images/ fall joints uploads/Artboard 1.png" alt="pic" width="333px" height="200px"></td>
+                        </tr>
+                    </table>   
+                 </div>
+
     </div>
 
     <!-- DO NOT PUT ANYTHING HERE BOZO -->
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+        
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+        
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+        
+                </script>
 
 </body>
 </html>

@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/sidebar_styling.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile_styling.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 </head>
 <body>
@@ -32,7 +33,7 @@
         <p style="font-weight: bold">Egypt Scrapbook I</p>
         <p>A scrapbook about a remarkable three weeks in Egypt. </p>
 
-          <table>
+        <table class="desktop-table">
             <tr> <!--row 1-->
                 <td>
                     <img class="thumbnailImage" img src="images/egypt scrapbook uploads/Artboard 1.png" 
@@ -71,27 +72,93 @@
             </tr>
         </table>
 
-        <script>
-            $(document).ready(function() {
-                $(".thumbnailImage").click(function() {
-                    var currentWidth = $(this).attr('width');
-                    
-                    if (currentWidth === '666') {
-                        // If the current width is 666, set it back to the original size
-                        $(this).attr('width', '333');
-                        $(this).attr('height', '200');
-                    } else {
-                        // If the current width is not 666, set it to the larger size
-                        $(this).attr('width', '666');
-                        $(this).attr('height', '400');
-                    }
-                });
-            });
-        </script>
+        <div class="mobile-styles">
+            <table class="mobile-table">
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 1.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 2.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 3.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 4.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 5.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 6.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 7.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 8.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 9.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 10.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 11.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 12.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 13.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 14.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 15.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 16.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 17.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 18.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/egypt scrapbook uploads/Artboard 19.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+            </table>   
 
     </div>
 
     <!-- DO NOT PUT ANYTHING HERE BOZO -->
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+        
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+        
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+        
+                </script>
 
 </body>
 </html>
