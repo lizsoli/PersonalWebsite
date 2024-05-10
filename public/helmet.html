@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmet</title>
+    <link rel="stylesheet" type="text/css" href="styles/sidebar_styling.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mobile_styling.css">
+    <link rel="icon" href="icons/sword.ico">
+
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+<body>
+
+    <style>
+        html {
+            cursor: url("https://www.dropbox.com/scl/fi/1miktrby9odh8rc8xdokp/69524.png?rlkey=5ur0bswdhw4xq5qgzv7chz1ch&raw=1"), auto;
+        }
+    </style>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html"><p style= "padding-bottom: 10px;">Lizzy Soliman</p></a></li>
+            <li><a href="sockbook.html" class="special-link1"><span>Sock Book</span></a></li>
+            <li><a href="addressbook.html" class="special-link2"><span>Need a light?</span></a></li>
+            <li><a href="myname.html" class="special-link3"><span>My name is Lizzy...</span></a></li>
+            <li><a href="falljoints.html" class="special-link4"><span>Fall Joints</span></a></li>
+            <li><a href="helmet.html" class="special-link5"><span>Helmet</span></a></li>
+            <li><a href="postcards.html" class="special-link6"><span>Postcards from Rogart</span></a></li>
+            <li><a href="heavenisacistern.html" class="special-link7"><span>Heaven is a Cistern</span></a></li>
+            <li><a href="egyptscrapbookI.html" class="special-link8"><span>Egypt Scrapbook I</span></a></li>
+            <li><a href="cardboardtrain.html" class="special-link9"><span>Train: Late Night</span></a></li>
+            <li><a href="norway.html" class="special-link10"><span>i was in norway</span></a></li>
+            <li><a href="teenyvignettes.html" class="special-link11"><span>teeny vignettes</span></a></li>
+            <li><a href="digitalcollages.html" class="special-link12"><span>Digital collages</span></a></li>
+            <li><a href="https://fallasleepfastinamagicalforest.substack.com/" target="_blank" class="special-link13"><span>Fall Asleep Fast...➶</span></a></li>
+            <li><a href="about.html" class="special-link14"><p style="padding-top: 0px;"></p><span>About</span></a></li>
+            <li><a href="contact.html" class="special-link15"><span>Contact</span></a></li>
+        </ul>
+    </div>
+
+    <!-- start coding here -->
+    <div class="main-content">
+        <p style="font-weight: bold">Helmet</p>
+        <p>Three one-sheet zines featuring the incredible helmet designs from a <a href="https://letterboxd.com/film/hearts-and-armour/" target="_blank">mediocre movie</a>.
+        </p>
+
+        <table class="desktop-table">
+            <tr> <!--row 1-->
+                <td><img class="thumbnailImage" img src="images/helmet/Artboard 1.png" alt="pic" width="333px" height="200px"></td> <!--col 1-->
+                <td><img class="thumbnailImage" img src="images/helmet/Artboard 2.png" alt="pic" width="333px" height="200px"></td>
+                <td><img class="thumbnailImage" img src="images/helmet/Artboard 3.png" alt="pic" width="333px" height="200px"></td>
+            </tr>
+            <tr><!--row 2-->
+                <td><img class="thumbnailImage" img src="images/helmet/Artboard 4.png" alt="pic" width="333px" height="200px"></td>
+                <td><img class="thumbnailImage" img src="images/helmet/Artboard 5.png" alt="pic" width="333px" height="200px"></td>
+            </tr>
+        </table>
+
+        <div class="mobile-styles">
+            <table class="mobile-table">
+                <tr>
+                    <td><img img src="images/helmet/Artboard 1.png 1.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/helmet/Artboard 2.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/helmet/Artboard 3.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/helmet/Artboard 4.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+                <tr>
+                    <td><img img src="images/helmet/Artboard 5.png" alt="pic" width="333px" height="200px"></td>
+                </tr>
+            </table>   
+         </div>
+
+    </div>
+
+    <!-- DO NOT PUT ANYTHING HERE BOZO -->
+    <script>
+        document.querySelectorAll('.thumbnailImage').forEach(image => {
+            image.addEventListener('click', () => {
+                // Add the enlarged class to start the animation
+                image.classList.add('enlarged');
+        
+                // Create or find the overlay
+                let overlay = document.querySelector('.overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.classList.add('overlay');
+                    document.body.appendChild(overlay);
+        
+                    // Clicking on the overlay reverts the image back to normal
+                    overlay.addEventListener('click', () => {
+                        image.classList.remove('enlarged');
+                        overlay.remove();
+                    });
+                }
+            });
+        });
+        
+                </script>
+
+</body>
+</html>

@@ -39,51 +39,63 @@
 
 /* LINK HOVERS */
 .special-link1:hover span {
-        color: #f76407; /* Change to desired hover color */
+        color: #ff6a00; /* Change to desired hover color */
     }
 
 .special-link2:hover span {
-        color: #de6c00; /* Change to desired hover color */
+        color: #ff531d; /* Change to desired hover color */
     }
     
 .special-link3:hover span {
-        color: #c57100; /* Change to desired hover color */
+        color: #fe372e; /* Change to desired hover color */
     }
 
 .special-link4:hover span {
-        color: #ad7400; /* Change to desired hover color */
+        color: #fa043b; /* Change to desired hover color */
     }
 
 .special-link5:hover span {
-        color: #957500; /* Change to desired hover color */
+        color: #f10049; /* Change to desired hover color */
     }
 
 .special-link6:hover span {
-        color: #7e7400; /* Change to desired hover color */
+        color: #e10057; /* Change to desired hover color */
     }
 
 .special-link7:hover span {
-        color: #687200; /* Change to desired hover color */
+        color: #d10061; /* Change to desired hover color */
     }
 
 .special-link8:hover span {
-        color: #526f00; /* Change to desired hover color */
+        color: #c1006a; /* Change to desired hover color */
     }
 
 .special-link9:hover span {
-        color: #3e6b00; /* Change to desired hover color */
+        color: #b10070; /* Change to desired hover color */
     }
 
 .special-link10:hover span {
-        color: #286612; /* Change to desired hover color */
+        color: #a10076; /* Change to desired hover color */
     }
 
 .special-link11:hover span {
-        color: #286612; /* Change to desired hover color */
+        color: #8f007d; /* Change to desired hover color */
     }
 
 .special-link12:hover span {
-        color: #286612; /* Change to desired hover color */
+        color: #7d0084; /* Change to desired hover color */
+    }
+
+.special-link13:hover span {
+        color: #67008e; /* Change to desired hover color */
+    }
+
+.special-link14:hover span {
+        color: #4f0099; /* Change to desired hover color */
+    }
+
+.special-link15:hover span {
+        color: #0d009e; /* Change to desired hover color */
     }
   
 @media only screen and (max-width: 400px) {
